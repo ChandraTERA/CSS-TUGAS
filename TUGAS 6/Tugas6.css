@@ -1,0 +1,30 @@
+div.logo, img {
+    width: 25px;
+    height: 24px;
+}
+
+h2 {
+    width: max-content;
+}
+
+div{
+    margin: 1em 1em 1em 2px;
+}
+
+p {
+    overflow:scroll;
+    background-color: aqua;
+    width: 21em;
+}
+
+.pertama {
+    border: 0.4em dotted red;
+}
+
+.kedua {
+    border: 0.4em solid green;
+}
+
+.ketiga {
+    border: 1em dashed blue;
+}
