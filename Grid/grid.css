@@ -1,0 +1,57 @@
+
+html, body {
+    margin: 0;
+    padding: 0;
+  }
+
+  .container {
+    width: 60%;
+    margin: 50px auto;
+    display: grid;
+    /* border: 2px solid blue; */
+    /* grid-template-columns: 100px 30%;  */
+    /* grid-template-rows: 50px 100px;  */
+    /* template column dan rows menggunakan explitsit */
+    /* grid-auto-rows: 200px; */
+    /* grid auto rows menggunakan implicit */
+    /* grid-auto-flow: column; */
+    /* Membuat column menjadi ke kanan explicit*/
+    /* grid-auto-rows: 50px ;  */
+    /* Membuat tinggi baris */
+    /* grid-template-columns: 4fr 2.5fr 4fr 3fr 4fr;  */
+    /* Membuat ukuran colum lebar secara manual dengan ketentuan */
+    /* grid-template-columns: repeat(5, 3fr) repeat(6, 5fr); */
+    /* Membuat grid template menjadi memiliki ukuran yang sama yang sudah di tentukan */
+    /* grid-template-columns: repeat(6, 3fr); */
+    /* Membuat grid column ketentuan dengan ukuran fr */
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    /* grid membuat colom menjadi 3 colom */
+    /* grid-template-columns: 1fr max-content 1fr; */
+    /* Membuat max dan min karakter jika min maka 1 jika lebih kebawah kalau max maka 1 baris */
+    /* grid-template-columns: repeat(auto-fit, 100px); */
+    /* Membuat jika fit maka akan menyesuaikan jika fill maka masih ada yang kosong */
+    /* grid-template-columns: 1fr minmax(200px, 300px) 1fr; */
+    /* membuat kolom minimal dan maximal tetap panjang kolom yang lainnya tetap 1fr*/
+    /* grid-template:  */
+    /* 'header header header' 50px [baris1-akhir baris2-mulai]  */
+    /* 'footer footer footer'100px [baris2-akhir] / 1fr 2fr 3fr; */ 
+    /* Membuat tata letak secara baris dan kolom yang dipisahkan dengan "/" */
+    /* column-gap: 10px;
+    row-gap: 10px;
+    gap: 10px; */
+    /* colomnya aja atau barisnya aja atau keduanya di buat jarak */
+  }
+  
+  .item {
+    background-color: rgb(138, 209, 254);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(12, 11, 11);
+    /* margin: 5px; */
+  }
+  
+
+  .item:nth-child(even) {
+    background: rgb(255, 142, 142);
+  }
