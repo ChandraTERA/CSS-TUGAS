@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan 1 | Grid</title>
+
+    <style>
+        * {
+            margin: 0px auto;
+            padding: 0 auto;
+        }
+
+        .container {
+            width: 80%;
+            border: 4px solid black;
+            margin: 50px auto;
+            background: #b1afaf;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            place-items: center;
+            grid-template-areas: 
+            'header header header'
+            'asside section section'
+            'navbar section section'
+            'footer footer footer';
+            column-gap: 5px;
+        }
+
+        .items {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 100px;
+            box-sizing: border-box;
+        }
+
+        .header {
+            grid-area: header;
+            background: #c5da0d;
+        }
+
+        .asside {
+            grid-area: asside;
+            background: #04cddb;
+        }
+
+        .section {
+            
+            grid-area: section;
+            background: #b90dc9;
+        }
+        
+        .navbar {
+            grid-area: navbar;
+            background: #dd4d71;
+        }
+        
+        .footer {
+            grid-area: footer;
+            background: #7e7c7c;
+        }
+
+        @media screen and (min-width: 576px) {
+            .container {
+                grid-template-areas: 
+                'header header header'
+                'asside section section'
+                'navbar section section'
+                'footer footer footer';
+            }
+        }
+        
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="items header">Header</div>
+        <div class="items asside">Asside</div>
+        <div class="items navbar">Navbar</div>
+        <div class="items section">content</div>
+        <div class="items footer">Footer</div>
+    </div>
+    
+</body>
+</html>

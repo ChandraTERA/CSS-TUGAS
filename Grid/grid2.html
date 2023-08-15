@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css" type="text/css">
+  <title>Latihan 2 | Grid</title>
+  <style>
+    * {
+        margin: 0 auto;
+        padding: 0 auto;
+        background: #ddd;
+    }
+
+    .container {
+        width: 80%;
+        margin: 50px auto;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas: 
+        'navbar'
+        'sidebar'
+        'main'
+        'content1'
+        'content2'
+            'content3'
+            'footer';            
+        }
+        
+        .items {
+        width: 100%;
+        border: 10px solid skyblue;
+    
+        display: flex;
+        place-content: center;
+        place-items: center;
+        color: rgb(24, 23, 23);
+        font-weight: 700;
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 100px;
+        box-sizing: border-box;
+    }
+
+    .navbar {
+        grid-area: navbar;
+        background-color: #1290da;
+    }
+
+    .sidebar {
+        height: 100%;
+        grid-area: sidebar;
+        background: #e90b0b;
+    }
+
+    .main {
+        grid-area: main;
+        background: #e9da0b;
+    }
+
+    .content1 {
+        grid-area: content1;
+        background: #da12a8;
+    }
+
+    .content2 {
+        grid-area: content2;
+        background: #da9412;
+    }
+
+    .content3 {
+        grid-area: content3;
+        background: #e90b42;
+    }
+
+    .footer {
+        grid-area: footer;
+        background: #353434;
+    }
+
+    @media screen and (min-width:576px) {
+        .container {
+            background: skyblue;
+            grid-template-areas: 
+            'navbar navbar navbar navbar'
+            'sidebar main main main'
+            'sidebar content1 content2 content3'
+            'sidebar footer footer footer';
+        }
+    }
+        
+  </style>
+
+</head>
+<body>
+  
+  <div class="container">
+    <div class="items navbar">Navbar/Header</div>
+    <div class="items sidebar">Sidebar</div>
+    <div class="items main">Main</div>
+    <div class="items content1">content1</div>
+    <div class="items content2">content2</div>
+    <div class="items content3">content3</div>
+    <div class="items footer">Footer</div>
+  </div>    
+    
+  
+</body>
+</html>
